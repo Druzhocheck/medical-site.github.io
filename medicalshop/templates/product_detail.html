@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+        <div class = "leftimg">
+            <img src="{{ product.image.url }}">
+        </div>
+    <div id = "titleright">
+        <h1>{{ product.title }}</h1>
+            <p>Цена: {{ product.price }} руб.</p>
+            <p>Описание: {{ product.description }}</p>
+    </div>
+        {% comment %} <div id = "tableright">
+             {% if product.category.slug == 'notebooks'%}
+                {% include 'notebook_specification.html'%}
+            {% endif%}
+            {% if product.category.slug == 'smartphones'%}
+                {% include 'smartphone_specification.html'%}
+            {% endif%} 
+        </div> {% endcomment %}
+<div id = "btnplace">
+<a href="{% url 'add_to_cart' ct_model=ct_model slug=product.slug %}"><button class = "yelbtn">Добавить в корзину</button></a>
+</div>
+{% endblock content %}

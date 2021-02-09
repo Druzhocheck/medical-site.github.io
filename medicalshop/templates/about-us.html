@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<h1>О компании</h1>
+<div>
+    <p>Компания Медик (Бренд «Первый медицинский») была создана в 2013 году, 
+    как небольшое предприятие по поставке расходных материалов в лечебные учреждения,
+     основной целью которого ставилось исследование и оценка потребностей населения в огромном 
+     рынке товаров медицинского назначения. Подведя итоги работы за год и было намечено
+      открытие специализированного социального розничного магазина. Уровень оснащения медицинскими
+       услугами в стране находится на достаточно высоком уровне и, можно не сомневаться, что любой 
+       гражданин получит необходимую и квалифицированную помощь точно и в срок.</p
+</div>
+<div id = "goods" style = "margin-top: 100px">
+  <h1>Наши врачи</h1>
+  <div class = "row">
+    <div class="product-item">
+        <img  class="card-img-top" src = "{% static "img/team_member_1.jpg" %}" alt="">
+        <div class="product-list">
+            <h3>Джеймс Блэк - ЛОР</h3> 
+        </div>
+    </div>
+    <div class="product-item">
+        <img  class="card-img-top" src = "{% static "img/team_member_2.jpg" %}" alt="">
+        <div class="product-list">
+            <h3>Элизабет Винк - Дерматолог</h3> 
+        </div>
+    </div>
+    <div class="product-item">
+        <img  class="card-img-top" src = "{% static "img/team_member_3.jpg" %}" alt="">
+        <div class="product-list">
+            <h3>Антонио Браун - Терапевт</h3> 
+        </div>
+    </div>
+    <div class="product-item">
+        <img  class="card-img-top" src = "{% static "img/team_member_4.jpg" %}" alt="">
+        <div class="product-list">
+            <h3>Лили Уайт - Уролог</h3> 
+        </div>
+    </div>
+    <div class="product-item">
+        <img class="card-img-top" src = "{% static "img/team_member_6.jpg" %}" alt="">
+        <div class="product-list">
+            <h3>Дэйвид Смуз - Патологоанатом</h3> 
+        </div>
+    </div>
+    <div class="product-item">
+        <img class="card-img-top" src = "{% static "img/team_member_8.jpg" %}" alt="">
+        <div class="product-list">
+            <h3>Карл Монк - Хирург</h3> 
+        </div>
+    </div>
+  </div> 
+</div>
+
+
+{% endblock content %}
+
+

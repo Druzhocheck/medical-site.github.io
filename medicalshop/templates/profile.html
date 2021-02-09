@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{%block content%}
+    <h3>Заказы пользователя {{request.user.username}}</h3>
+        {% if not orders.count %}
+            <div>
+                <h3>У вам пока нет заказов <a href = "{% url 'base' %}">Вернуться на главную страницу</a></h3>
+            </div>
+        {% else %}
+            <div>
+                <table>
+                    <thead>
+                        <th>Номер</th>
+                        <th>Статус</th>
+                        <th>Сумма</th>
+                        <th>Товар</th>
+                        <th>Дополнительно</th>
+                    </thead>
+                    <tbody>
+                        {% for order in orders %}
+                            <tr>
+                                <th>{{order.id}}</th>
+                                <td>{{order.get_status_display}}</td>
+                                <td>{{order.cart.final_price}}руб.</td>
+                                <td>
+                                    <ul>
+                                        {% for item in order.cart.products.all %}
+                                            <li>{{item.product.title}}x{{item.qty}}</li>
+                                        {% endfor %}
+                                    </ul>
+                                </td> 
+                                <td>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Дополнительно</button>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        {% endif %}
+{% endblock content%}
