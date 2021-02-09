@@ -1,0 +1,18 @@
+.leftimg {
+    float: left;
+    width: 50%;
+    margin-top: 50px;
+}
+
+#tableright {
+    float: right;
+}
+
+#titleright {
+    float: left;
+    width: 15%
+}
+
+#btnplace a {
+    margin-right: 30px;
+}

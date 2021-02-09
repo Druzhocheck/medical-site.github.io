@@ -1,0 +1,58 @@
+.header {
+    height: 8.2%;
+    display: flex;
+    width: 99%;
+    left: 0;
+    top: 0;
+    position: fixed;
+    justify-content: space-between;
+    padding: 5px;
+    padding-bottom: 0;
+    background: #689CD2;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header_section {
+    display: flex;
+    align-items: center;
+}
+
+.header_item {
+    font-size: 20px;
+    margin-left: 5px;
+    padding-left: 15px;
+    padding-right: 20px;
+}
+
+.header_item:hover {
+    background-color: #FF9900;
+    border-radius: 4px;
+}
+
+.headerButton {
+    cursor: pointer;
+}
+
+.headerlogo {
+    padding-left: 10;
+    padding-right: 30px;
+    font-weight: bold;
+}
+
+.movedistance {
+    margin-right: 20px;
+}
+
+#round {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background: red;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.header a {
+    color: white;
+}

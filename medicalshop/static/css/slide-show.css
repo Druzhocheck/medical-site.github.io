@@ -1,0 +1,13 @@
+.image img {
+    padding-top: 10px;
+    text-align: center;
+    height: 300px;
+    width: 400px;
+    float: right;
+    width: 50%;
+}
+
+#titleshop {
+    margin-right: 0;
+    width: 50%;
+}
